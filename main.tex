@@ -60,7 +60,7 @@
     \pagebreak 
     \unsect{Use case diagram}
     \bigbreak \noindent 
-    \fig{.7}{./figures/1.png}
+    \fig{.7}{./figures/2.png}
 
     \pagebreak 
     \unsect{Actor Descriptions}
@@ -78,7 +78,7 @@
             \hline
             Administrator	&A privileged user who configures shipping  handling charges, maintains weight-based pricing brackets, and views/searches orders by date, status, or price range.	&Manage Shipping, View Orders \\
             \hline
-            Credit Card Processing System	&An external service used by the new system to authorize customer credit card transactions. Receives card info, expiration date, and amount, returning authorization.	&Process Payment \\
+            Credit Card Processing System	&An external service used by the new system to authorize customer credit card transactions. Receives card info, expiration date, and amount, returning authorization.	& Make purchase \\
             \hline
             Product Info DB	&The legacy database storing product part numbers, descriptions, weights, pictures, and base prices. The new system retrieves product data from here when displaying the catalog.	&Manage shipping, Update inventory, set shipping status, print packaging list, browse catalog, make a purchase\\
             \hline
@@ -125,7 +125,7 @@
         \begin{tabular}{|p{5cm}|p{8cm}|}
             \hline
             Actors & 
-            Customer, Product Info DB \\
+            Customer, Product Info DB, Credit card processing system \\
             \hline
             Description & 
             The Customer selects products, specifies quantities, provides 
@@ -143,8 +143,7 @@
             and confirms the order \\
             \hline
             Comments & 
-            Credit card authorization is handled by the \emph{Process Payment} 
-            use case. An email confirmation is sent upon successful purchase. \\
+            Credit card authorization is handled, and an email confirmation is sent upon successful purchase. \\
             \hline
         \end{tabular}
     \end{center}
